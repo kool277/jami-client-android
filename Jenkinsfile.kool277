@@ -1,0 +1,110 @@
+// kool277 pipeline for kool277/jami-client-android (multibranch job from
+// ci/jenkins/setup.sh in kool277/jami). The build scripts live in the
+// workspace repository kool277/jami: each build fetches it (outside the
+// checkout, into $WORKSPACE_TMP/kool277) at the same tag for a v* release,
+// else main. Builds reuse the daemon's contrib tree and the app's build/ of
+// the previous build in this Jenkins workspace; the first one takes hours.
+//
+// The app builds against its daemon submodule; on a v* tag against the
+// jami-daemon commit that the workspace pins, the one the platform release
+// ships. Every build: the build image from the app's docker/Dockerfile,
+// unsigned release APKs for every ABI and flavor, and the libjamiclient
+// unit tests, in the ci/android container. On a v* tag: publish the APKs
+// to the GitHub release (see RELEASING.md in kool277/jami). Needs the
+// github-kool277 credential, docker and /var/cache/jami on the agent.
+
+def ciRef() { env.TAG_NAME?.startsWith('v') ? env.TAG_NAME : 'main' }
+
+// Run a network step up to 10 times, 30 s apart: this agent's connection
+// drops for minutes at a time.
+def withNetRetry(Closure body) {
+    def attempt = 0
+    retry(10) {
+        if (attempt++ > 0) {
+            sleep(time: 30, unit: 'SECONDS')
+        }
+        body()
+    }
+}
+
+pipeline {
+    agent any
+    options {
+        timestamps()
+        ansiColor('xterm')
+        timeout(time: 8, unit: 'HOURS')
+        disableConcurrentBuilds()
+        // Checked out in the first stage, with withNetRetry.
+        skipDefaultCheckout()
+        buildDiscarder(logRotator(numToKeepStr: '20'))
+    }
+    environment {
+        KOOL277 = "${env.WORKSPACE_TMP}/kool277"
+        CI = "${env.WORKSPACE_TMP}/kool277/ci"
+        ANDROID_DIR = "${env.WORKSPACE}"
+        DAEMON_DIR = "${env.WORKSPACE}/daemon"
+    }
+    stages {
+        stage('Sources') {
+            steps {
+                withNetRetry {
+                    checkout scm
+                }
+                withNetRetry {
+                    sh "rm -rf \"\$KOOL277\" && git clone -q --depth 1 --branch ${ciRef()} https://github.com/kool277/jami.git \"\$KOOL277\""
+                }
+                // --force: an update cut short by an outage leaves the
+                // submodule cloned but not checked out, at the pinned
+                // commit, so a plain update would skip it from then on.
+                withNetRetry {
+                    sh 'git submodule update --init --force daemon'
+                }
+                script {
+                    if (env.TAG_NAME?.startsWith('v')) {
+                        def pin = sh(returnStdout: true,
+                                     script: "git -C \"\$KOOL277\" ls-tree HEAD jami-daemon | awk '{print \$3}'").trim()
+                        withNetRetry {
+                            sh "git -C daemon fetch -q origin ${pin} && git -C daemon checkout -q ${pin}"
+                        }
+                    }
+                }
+                sh 'git -C daemon log --oneline -1'
+            }
+        }
+        stage('Image') {
+            steps {
+                // The image downloads the SDK, NDK and toolchains.
+                withNetRetry {
+                    sh '"$CI/android/run.sh" true'
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'SKIP_IMAGE_BUILD=1 "$CI/android/run.sh"'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'SKIP_IMAGE_BUILD=1 "$CI/android/run.sh" sh /ci/test.sh'
+            }
+            post {
+                always { junit allowEmptyResults: true, testResults: 'jami-android/libjamiclient/build/test-results/test/*.xml' }
+            }
+        }
+        stage('Release') {
+            when { tag 'v*' }
+            steps {
+                sh 'VERSION="$TAG_NAME" DOCKER_RUN_ARGS="-e VERSION" SKIP_IMAGE_BUILD=1 "$CI/android/run.sh" sh /ci/package.sh'
+                archiveArtifacts artifacts: 'jami-android/app/build/dist/*', fingerprint: true
+                withCredentials([usernamePassword(credentialsId: 'github-kool277',
+                                                  usernameVariable: 'GH_USER',
+                                                  passwordVariable: 'GH_TOKEN')]) {
+                    withNetRetry {
+                        sh '"$CI/release/publish-release.sh" jami-client-android "$TAG_NAME" jami-android/app/build/dist/*'
+                    }
+                }
+            }
+        }
+    }
+}
