@@ -22,6 +22,9 @@ dependencies {
 
     // Required -- JUnit 4 framework
     testImplementation(libs.junit)
+    // ezvcard.VCard catches a FreeMarker exception, which the JVM's
+    // verifier loads (Android's does not)
+    testRuntimeOnly(libs.freemarker)
     // RxJava
     implementation(libs.rxjava)
     // gson

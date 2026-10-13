@@ -17,6 +17,7 @@
 package net.jami.utils
 
 import net.jami.utils.VCardUtils.vcardToString
+import ezvcard.Ezvcard
 import ezvcard.VCard
 import ezvcard.property.FormattedName
 import net.jami.utils.VCardUtils
@@ -29,14 +30,10 @@ class VCardUtilsTest {
         val result = vcardToString(VCard().apply {
             addFormattedName(FormattedName("SFL Test"))
         })
-        Assert.assertTrue(result.contentEquals(
-                """
-    BEGIN:VCARD
-    VERSION:2.1
-    X-PRODID:ez-vcard 0.10.2
-    FN:SFL Test
-    END:VCARD
-    
-    """.trimIndent()))
+        Assert.assertTrue(result.contentEquals("BEGIN:VCARD\r\n" +
+                "VERSION:2.1\r\n" +
+                "X-PRODID:ez-vcard ${Ezvcard.VERSION}\r\n" +
+                "FN:SFL Test\r\n" +
+                "END:VCARD\r\n"))
     }
 }

@@ -43,10 +43,10 @@ class ConversationTest {
         Assert.assertEquals(conversation!!.contact, contact)
     }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val conference: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getConference() {
+    }
 
     @Test
     @Throws(Exception::class)
@@ -63,20 +63,20 @@ class ConversationTest {
     fun setContact() {
     }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val isVisible: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun isVisible() {
+    }
 
     @Test
     @Throws(Exception::class)
     fun setVisible() {
     }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val contact: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getContact() {
+    }
 
     @Test
     @Throws(Exception::class)
@@ -84,9 +84,9 @@ class ConversationTest {
         val oldSize = conversation!!.sortedHistory.blockingGet().size
         conversation!!.addCall(
             CallHistory(
-                "Coucou",
-                "ring:test",
                 "1",
+                "ring:test",
+                "Coucou",
                 Call.Direction.INCOMING,
                 0L
             )
@@ -111,50 +111,50 @@ class ConversationTest {
     fun updateTextMessage() {
     }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val history: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getHistory() {
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val aggregateHistory: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getAggregateHistory() {
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val accountsUsed: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getAccountsUsed() {
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val lastAccountUsed: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getLastAccountUsed() {
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val currentCall: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getCurrentCall() {
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val currentCalls: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getCurrentCalls() {
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val historyCalls: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getHistoryCalls() {
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val unreadTextMessages: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getUnreadTextMessages() {
+    }
 
-    @get:Throws(Exception::class)
-    @get:Test
-    val rawHistory: Unit
-        get() {}
+    @Test
+    @Throws(Exception::class)
+    fun getRawHistory() {
+    }
 
     @Test
     @Throws(Exception::class)
