@@ -27,7 +27,8 @@ class UriTest {
     fun testGoodRawString() {
         val uri = "ring:1234567890123456789012345678901234567890"
         val test = fromString(uri)
-        Assert.assertTrue(test.rawUriString.contentEquals(uri))
+        // ring: is the legacy scheme, normalized to jami:
+        Assert.assertTrue(test.rawUriString.contentEquals("jami:1234567890123456789012345678901234567890"))
     }
 
     @Test
@@ -47,7 +48,7 @@ class UriTest {
         val test = fromStringWithName(uri)
         Assert.assertNull(test.second)
         Assert.assertTrue(test.first.scheme.contentEquals("ring:"))
-        Assert.assertTrue(test.first.uri.contentEquals("ring:1234567890123456789012345678901234567890"))
+        Assert.assertTrue(test.first.uri.contentEquals("1234567890123456789012345678901234567890"))
     }
 
     @Test
