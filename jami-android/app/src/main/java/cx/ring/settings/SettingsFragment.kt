@@ -37,6 +37,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import cx.ring.BuildConfig
 import cx.ring.R
 import cx.ring.application.JamiApplication
+import cx.ring.client.ColorChooserBottomSheet
 import cx.ring.client.LogsActivity
 import cx.ring.client.PushNotificationLogsActivity
 import cx.ring.databinding.FragSettingsBinding
@@ -51,6 +52,7 @@ import cx.ring.utils.ActionHelper.openJamiDonateWebPage
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import net.jami.daemon.JamiService
+import net.jami.model.ChatBackground
 import net.jami.model.DonationSettings
 import net.jami.model.Settings
 import net.jami.mvp.GenericView
@@ -133,6 +135,11 @@ class SettingsFragment :
             }
             settingsDarkTheme.setOnCheckedChangeListener { _, isChecked: Boolean ->
                 presenter.darkMode = isChecked
+            }
+            settingsChatBackground.onSwatchClick = { choice ->
+                if (choice != null) presenter.saveChatBackground(choice)
+                else ColorChooserBottomSheet { color -> presenter.saveChatBackground(ChatBackground.Custom(color)) }
+                    .show(childFragmentManager, CHAT_BACKGROUND_COLOR_TAG)
             }
             settingsExtensionsSwitch.setOnCheckedChangeListener { _, isChecked: Boolean ->
                 JamiService.setPluginsEnabled(isChecked)
@@ -504,6 +511,7 @@ class SettingsFragment :
             settingsBlockRecord.isChecked = settings.isRecordingBlocked
             settingsLinkPreview.isChecked = settings.enableLinkPreviews
             settingsDonateSwitch.isChecked = donationSettings.donationReminderVisibility
+            settingsChatBackground.setChosen(viewModel.chatBackground)
         }
         mIsRefreshingViewFromPresenter = false
         mNotificationVisibility = settings.notificationVisibility
@@ -529,6 +537,7 @@ class SettingsFragment :
         const val EXTENSION_SETTINGS_TAG = "ExtensionSettings"
         const val EXTENSION_PATH_PREFERENCE_TAG = "ExtensionPathPreference"
         const val SHARED_SERVICES_SETTINGS_TAG = "SharedServicesSettings"
+        const val CHAT_BACKGROUND_COLOR_TAG = "ChatBackgroundColor"
         const val ARG_OPEN_SHARED_SERVICES = "open_shared_services"
     }
 }

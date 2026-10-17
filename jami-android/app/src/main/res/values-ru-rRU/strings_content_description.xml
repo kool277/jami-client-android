@@ -8,7 +8,7 @@
   <string name="video_extensions">Расширения видео</string>
   <string name="file_download_button">Загрузить</string>
   <string name="control_play">Воспроизвести</string>
-  <string name="control_replay">Ответ</string>
+  <string name="control_replay">Повторить</string>
   <string name="control_pause">Пауза</string>
   <string name="searchbar_navigation_account">Выберите аккаунт</string>
   <string name="add_conversation_member">Добавить участника беседы</string>

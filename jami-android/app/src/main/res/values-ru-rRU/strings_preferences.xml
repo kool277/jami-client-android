@@ -12,11 +12,11 @@
   <string name="pref_category_video_settings">Расширенные настройки видео</string>
   <string name="pref_mobileData_title">Мобильные данные</string>
   <string name="pref_mobileData_summary">Разрешить Jami использовать 3G / LTE в дополнение к Wi-Fi</string>
-  <string name="pref_pushNotifications_title">Всплывающие уведомления</string>
+  <string name="pref_pushNotifications_title">Push-уведомления</string>
   <string name="pref_pushNotifications_summary">Использовать сервера Google, чтобы разрешить прием звонков/сообщений в фоновом режиме</string>
   <string name="pref_unifiedPush_summary">Используйте службу UnifiedPush для получения звонков и сообщений в фоновом режиме</string>
   <string name="pref_video_advanced_title">Расширенные настройки видео</string>
-  <string name="pref_video_advanced_summary">Изменить битрейт видео, разрешение, а также получите доступ к экспериментальным функциям</string>
+  <string name="pref_video_advanced_summary">Изменить битрейт видео, разрешение, а также получить доступ к экспериментальным функциям</string>
   <string name="pref_hd_summary">Включить отправку HD-видео</string>
   <string name="pref_hwEncode_title">Включить ускоренное кодирование</string>
   <string name="pref_hwEncode_summary">Экспериментальная возможность</string>
@@ -65,10 +65,10 @@
   <string name="notification_private">Скрыть содержимое \n(отображать уведомления на экране блокировки, но скрывать их содержимое)\n</string>
   <string name="notification_secret">Не показывать\n(не отображать уведомления на экране блокировки)</string>
   <string name="connectivity_google_services_title">Службы Google</string>
-  <string name="connectivity_google_services_description">Используй Google Firebase и прокси DHT для приема push-уведомлений.</string>
+  <string name="connectivity_google_services_description">Используйте Google Firebase и прокси DHT для приема push-уведомлений.</string>
   <string name="connectivity_local_node_title">Локальный узел DHT</string>
-  <string name="connectivity_local_node_description">Используй DHT, подключаясь к другим устройствам и контактам Jami.</string>
-  <string name="connectivity_unified_push_description">Клиентский сервер UnifiedPush для получения push-уведомлений.</string>
+  <string name="connectivity_local_node_description">Используйте локальный узел DHT для подключения к другим устройствам и контактам Jami.</string>
+  <string name="connectivity_unified_push_description">Собственный сервер UnifiedPush для получения push-уведомлений.</string>
   <string name="connectivity_custom_title">Своё</string>
   <string name="connectivity_custom_description">Сейчас не используется ни одна из доступных предустановок конфигурации.</string>
   <!--Extension-->
