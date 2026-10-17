@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The swatch of the default chat background: the theme's background, crossed out. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+    <path
+        android:fillColor="@color/background"
+        android:pathData="M20,0.5A19.5,19.5 0,1 1,20 39.5A19.5,19.5 0,1 1,20 0.5Z"
+        android:strokeWidth="1"
+        android:strokeColor="?attr/colorOutlineVariant" />
+    <path
+        android:pathData="M6.2,33.8L33.8,6.2"
+        android:strokeWidth="2"
+        android:strokeColor="?attr/colorOutline" />
+</vector>

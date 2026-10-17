@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Strings for xml content description of images-->
+  <string name="contact_quick_call_description">Tezkor qoʻngʻiroq</string>
+  <string name="contact_picture_description">Kontakt rasmi</string>
+  <string name="presence_online">Onlayn</string>
+  <string name="dial_numeric_pad">Raqamli klaviatura</string>
+  <string name="contact_unblock">Blokdan chiqarish</string>
+  <string name="video_extensions">Video kengaytmalari</string>
+  <string name="file_download_button">Yuklab olish</string>
+  <string name="control_play">Ijro etish</string>
+  <string name="control_replay">Qayta ijro etish</string>
+  <string name="control_pause">Pauza</string>
+  <string name="searchbar_navigation_account">Hisobni tanlash</string>
+  <string name="add_conversation_member">Suhbatga aʼzo qoʻshish</string>
+  <string name="qrcode_to_scan">Skanerlash uchun QR-kod</string>
+  <string name="collab_format_bold">Qalin</string>
+  <string name="collab_format_italic">Kursiv</string>
+  <string name="collab_format_underline">Tagiga chizilgan</string>
+  <string name="collab_format_strike">Ustidan chizilgan</string>
+  <string name="collab_format_h1">Sarlavha 1</string>
+  <string name="collab_format_h2">Sarlavha 2</string>
+  <string name="collab_format_h3">Sarlavha 3</string>
+  <string name="collab_format_bullet_list">Belgili roʻyxat</string>
+  <string name="collab_format_ordered_list">Raqamli roʻyxat</string>
+  <string name="collab_format_align_left">Chapga tekislash</string>
+  <string name="collab_format_align_center">Markazga tekislash</string>
+  <string name="collab_format_align_right">Oʻngga tekislash</string>
+  <string name="collab_format_align_justify">Kenglik boʻyicha tekislash</string>
+  <string name="collab_format_link">Havola qoʻyish</string>
+  <string name="collab_format_image">Rasm qoʻyish</string>
+  <string name="collab_format_clear">Formatlashni tozalash</string>
+  <string name="collab_format_paragraph_style">Xatboshi uslubi</string>
+  <string name="collab_format_font">Shrift</string>
+  <string name="collab_format_size">Shrift oʻlchami</string>
+  <string name="collab_format_alignment">Xatboshini tekislash</string>
+  <string name="collab_format_choice">%1$s: %2$s</string>
+  <string name="collab_undo">Bekor qilish</string>
+  <string name="collab_redo">Qaytarish</string>
+</resources>

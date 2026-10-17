@@ -43,4 +43,6 @@
     <locale android:name="pl-PL" />
     <locale android:name="az-IR" />
     <locale android:name="ast-ES" />
+    <locale android:name="uz" />
+    <locale android:name="uz-Cyrl" />
 </locale-config>
