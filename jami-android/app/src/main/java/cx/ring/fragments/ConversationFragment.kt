@@ -1164,6 +1164,8 @@ class ConversationFragment : BaseSupportFragment<ConversationPresenter, Conversa
     private fun setupActionbar(conversation: ConversationItemViewModel, img: AvatarDrawable) {
         binding?.apply {
             conversationAvatar.setImageDrawable(img)
+            conversationAvatar.contentDescription =
+                if (conversation.presenceStatus != Contact.PresenceStatus.OFFLINE) getString(R.string.presence_online) else null
             contactTitle.text = conversation.title
             if (conversation.uriTitle != conversation.title) {
                 contactSubtitle.text = conversation.uriTitle
