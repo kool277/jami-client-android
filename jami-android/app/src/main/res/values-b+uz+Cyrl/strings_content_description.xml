@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Strings for xml content description of images-->
+  <string name="contact_quick_call_description">Тезкор қўнғироқ</string>
+  <string name="contact_picture_description">Контакт расми</string>
+  <string name="dial_numeric_pad">Рақамли клавиатура</string>
+  <string name="contact_unblock">Блокдан чиқариш</string>
+  <string name="video_extensions">Видео кенгайтмалари</string>
+  <string name="file_download_button">Юклаб олиш</string>
+  <string name="control_play">Ижро этиш</string>
+  <string name="control_replay">Қайта ижро этиш</string>
+  <string name="control_pause">Пауза</string>
+  <string name="searchbar_navigation_account">Ҳисобни танлаш</string>
+  <string name="add_conversation_member">Суҳбатга аъзо қўшиш</string>
+  <string name="qrcode_to_scan">Сканерлаш учун QR-код</string>
+  <string name="collab_format_bold">Қалин</string>
+  <string name="collab_format_italic">Курсив</string>
+  <string name="collab_format_underline">Тагига чизилган</string>
+  <string name="collab_format_strike">Устидан чизилган</string>
+  <string name="collab_format_h1">Сарлавҳа 1</string>
+  <string name="collab_format_h2">Сарлавҳа 2</string>
+  <string name="collab_format_h3">Сарлавҳа 3</string>
+  <string name="collab_format_bullet_list">Белгили рўйхат</string>
+  <string name="collab_format_ordered_list">Рақамли рўйхат</string>
+  <string name="collab_format_align_left">Чапга текислаш</string>
+  <string name="collab_format_align_center">Марказга текислаш</string>
+  <string name="collab_format_align_right">Ўнгга текислаш</string>
+  <string name="collab_format_align_justify">Кенглик бўйича текислаш</string>
+  <string name="collab_format_link">Ҳавола қўйиш</string>
+  <string name="collab_format_image">Расм қўйиш</string>
+  <string name="collab_format_clear">Форматлашни тозалаш</string>
+  <string name="collab_format_paragraph_style">Хатбоши услуби</string>
+  <string name="collab_format_font">Шрифт</string>
+  <string name="collab_format_size">Шрифт ўлчами</string>
+  <string name="collab_format_alignment">Хатбошини текислаш</string>
+  <string name="collab_format_choice">%1$s: %2$s</string>
+  <string name="collab_undo">Бекор қилиш</string>
+  <string name="collab_redo">Қайтариш</string>
+</resources>
