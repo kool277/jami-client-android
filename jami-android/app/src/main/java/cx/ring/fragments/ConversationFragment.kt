@@ -87,6 +87,7 @@ import net.jami.model.interaction.TextMessage
 import net.jami.services.NotificationService
 import net.jami.services.PeerServicesService
 import net.jami.services.PeerServicesStatus
+import net.jami.services.PreferencesService
 import net.jami.smartlist.ConversationItemViewModel
 import java.io.File
 import java.util.*
@@ -125,6 +126,7 @@ class ConversationFragment : BaseSupportFragment<ConversationPresenter, Conversa
     private var inlineAudioRecorder: InlineAudioRecorder? = null
 
     @Inject lateinit var peerServicesService: PeerServicesService
+    @Inject lateinit var preferencesService: PreferencesService
     @Named("UiScheduler") @Inject lateinit var uiScheduler: Scheduler
 
     private fun isImeAnimation(a: WindowInsetsAnimationCompat): Boolean {
@@ -408,6 +410,13 @@ class ConversationFragment : BaseSupportFragment<ConversationPresenter, Conversa
             (histList.itemAnimator as? DefaultItemAnimator)?.supportsChangeAnimations = false
             histList.adapter = mAdapter
             searchList.adapter = mSearchAdapter
+
+            // The chat background chosen in the settings, if any, replaces the theme's behind the messages.
+            mCompositeDisposable.add(preferencesService.chatBackground()
+                .observeOn(uiScheduler)
+                .subscribe { background ->
+                    histList.background = ChatBackgroundUtils.getDrawable(histList.context, background)
+                })
 
             val messageSwipeController =
                 ActionHelper.MessageSwipeController(

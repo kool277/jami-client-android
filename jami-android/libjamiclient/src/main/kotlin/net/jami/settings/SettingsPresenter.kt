@@ -18,6 +18,7 @@ package net.jami.settings
 
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Scheduler
+import net.jami.model.ChatBackground
 import net.jami.model.DonationSettings
 import net.jami.model.Settings
 import net.jami.mvp.GenericView
@@ -28,7 +29,8 @@ import javax.inject.Named
 
 data class SettingsViewModel(
     val settings: Settings,
-    val donationSettings: DonationSettings
+    val donationSettings: DonationSettings,
+    val chatBackground: ChatBackground
 )
 
 class SettingsPresenter @Inject constructor(
@@ -41,9 +43,10 @@ class SettingsPresenter @Inject constructor(
         mCompositeDisposable.add(
             Observable.combineLatest(
                 mPreferencesService.settingsSubject,
-                mPreferencesService.donationSettings()
-            ) { settings, donationSettings ->
-                SettingsViewModel(settings, donationSettings)
+                mPreferencesService.donationSettings(),
+                mPreferencesService.chatBackground()
+            ) { settings, donationSettings, chatBackground ->
+                SettingsViewModel(settings, donationSettings, chatBackground)
             }
                 .subscribeOn(mUiScheduler)
                 .subscribe { vm -> this.view?.showViewModel(vm) })
@@ -59,6 +62,10 @@ class SettingsPresenter @Inject constructor(
 
     fun saveDonationSettings(donationSettings: DonationSettings) {
         mPreferencesService.setDonationSettings(donationSettings)
+    }
+
+    fun saveChatBackground(background: ChatBackground) {
+        mPreferencesService.setChatBackground(background)
     }
 
     var darkMode: Boolean

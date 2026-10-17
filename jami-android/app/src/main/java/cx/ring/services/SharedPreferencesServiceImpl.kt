@@ -31,6 +31,7 @@ import cx.ring.utils.NetworkUtils
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.BehaviorSubject
 import io.reactivex.rxjava3.subjects.Subject
+import net.jami.model.ChatBackground
 import net.jami.model.DonationSettings
 import net.jami.model.Settings
 import net.jami.model.Uri
@@ -51,6 +52,9 @@ class SharedPreferencesServiceImpl(private val context: Context, accountService:
                 appPrefs.getLong(PREF_DONATION_REMINDER_LAST_DISMISSED, 0)
             )
         )
+    }
+    private val mChatBackgroundSubject: Subject<ChatBackground> by lazy {
+        BehaviorSubject.createDefault(ChatBackground.parse(themePreferences.getString(PREF_CHAT_BACKGROUND, null)))
     }
 
     override fun saveSettings(settings: Settings) {
@@ -177,6 +181,13 @@ class SharedPreferencesServiceImpl(private val context: Context, accountService:
         applyDarkMode(darkMode)
     }
 
+    override fun chatBackground(): Observable<ChatBackground> = mChatBackgroundSubject
+
+    override fun setChatBackground(background: ChatBackground) {
+        themePreferences.edit { putString(PREF_CHAT_BACKGROUND, background.serialize()) }
+        mChatBackgroundSubject.onNext(background)
+    }
+
     override fun getMaxFileAutoAccept(accountId: String): Int {
         return context.getSharedPreferences(PREFS_ACCOUNT + accountId, Context.MODE_PRIVATE)
             .getInt(PREF_ACCEPT_IN_MAX_SIZE, 30) * 1024 * 1024
@@ -216,6 +227,7 @@ class SharedPreferencesServiceImpl(private val context: Context, accountService:
         private const val PREF_PLACE_CALLS = "place_calls"
         private const val PREF_ON_STARTUP = "on_startup"
         const val PREF_DARK_MODE = "darkMode"
+        private const val PREF_CHAT_BACKGROUND = "chatBackground"
         private const val PREF_ACCEPT_IN_MAX_SIZE = "acceptIncomingFilesMaxSize"
         const val PREF_EXTENSIONS = "extensions"
         private const val PREF_LOG_IS_ACTIVE = "log_is_active"
