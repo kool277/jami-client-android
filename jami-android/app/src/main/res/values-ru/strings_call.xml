@@ -20,7 +20,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
     <string name="call_error">"При запуске вызова возникла ошибка."</string>
     <string name="call_error_no_microphone">Вызов отменён. Микрофон не обнаружен.</string>
     <string name="call_error_no_camera_no_microphone">Вызов отменён. Камера или микрофон не обнаружены.</string>
-    <string name="screen_sharing_error">При старте обмена экрана возникла ошибка.</string>
+    <string name="screen_sharing_error">При запуске демонстрации экрана возникла ошибка.</string>
 
     <!-- SipCalls -->
     <string name="call_human_state_searching">Поиск</string>
@@ -31,7 +31,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
     <string name="call_human_state_hungup">Окончен</string>
     <string name="call_human_state_busy">Занято</string>
     <string name="call_human_state_failure">Сбой</string>
-    <string name="call_human_state_hold">Удержать</string>
+    <string name="call_human_state_hold">На удержании</string>
     <string name="call_human_state_over">Окончен</string>
     <!-- Conferences -->
     <string name="call_moderator">Модератор</string>
