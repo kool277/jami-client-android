@@ -19,6 +19,7 @@ package net.jami.services
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.BehaviorSubject
 import io.reactivex.rxjava3.subjects.Subject
+import net.jami.model.ChatBackground
 import net.jami.model.DonationSettings
 import net.jami.model.Settings
 import net.jami.model.Uri
@@ -92,5 +93,10 @@ abstract class PreferencesService(
     abstract var darkMode: Boolean
     abstract var isLogActive: Boolean
     abstract fun loadDarkMode()
+
+    /** The background of the conversations' message list: the current one, then each new one. */
+    abstract fun chatBackground(): Observable<ChatBackground>
+    abstract fun setChatBackground(background: ChatBackground)
+
     abstract fun getMaxFileAutoAccept(accountId: String): Int
 }

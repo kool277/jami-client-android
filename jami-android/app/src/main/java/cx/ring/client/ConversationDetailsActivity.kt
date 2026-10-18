@@ -163,7 +163,8 @@ class ConversationDetailsActivity : AppCompatActivity(), ContactPickerFragment.O
             }
         }
 
-        mDisposableBag.add(mConversationFacade.observeConversation(conversation)
+        // Like the conversation list, show the contact's presence, but not for groups.
+        mDisposableBag.add(mConversationFacade.observeConversation(conversation, !conversation.isSwarmGroup())
             .observeOn(DeviceUtils.uiScheduler)
             .doOnComplete { finish() }
             .subscribe({ vm ->
@@ -171,6 +172,8 @@ class ConversationDetailsActivity : AppCompatActivity(), ContactPickerFragment.O
                     .withViewModel(vm)
                     .withCircleCrop(true)
                     .build(this))
+                binding.conversationAvatar.contentDescription =
+                    if (vm.presenceStatus != Contact.PresenceStatus.OFFLINE) getString(R.string.presence_online) else null
                 name = vm.title
                 binding.conversationTitle.text = vm.title
 

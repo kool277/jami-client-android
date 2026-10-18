@@ -392,6 +392,19 @@
   <string name="menu_delete">Удалить</string>
   <string name="pref_darkTheme_title">Темная тема</string>
   <string name="pref_darkTheme_summary">Всегда использовать темную тему независимо от системных параметров</string>
+  <string name="pref_chat_background_title">Фон чата</string>
+  <string name="pref_chat_background_default">По умолчанию</string>
+  <string name="pref_chat_background_custom">Свой цвет</string>
+  <string name="chat_background_sky">Небо</string>
+  <string name="chat_background_mint">Мята</string>
+  <string name="chat_background_sand">Песок</string>
+  <string name="chat_background_rose">Роза</string>
+  <string name="chat_background_lavender">Лаванда</string>
+  <string name="chat_background_slate">Серый</string>
+  <string name="chat_background_sunrise">Рассвет</string>
+  <string name="chat_background_ocean">Океан</string>
+  <string name="chat_background_meadow">Луг</string>
+  <string name="chat_background_dusk">Сумерки</string>
   <!--Bottom Navigation-->
   <string name="navigation_item_conversation">Разговоры</string>
   <string name="navigation_item_contact_request">Приглашения</string>

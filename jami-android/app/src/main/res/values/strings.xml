@@ -565,6 +565,19 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
     <string name="menu_delete">Delete</string>
     <string name="pref_darkTheme_title">Dark theme</string>
     <string name="pref_darkTheme_summary">Always enable dark theme instead of using system behavior</string>
+    <string name="pref_chat_background_title">Chat background</string>
+    <string name="pref_chat_background_default">Default</string>
+    <string name="pref_chat_background_custom">Custom color</string>
+    <string name="chat_background_sky">Sky</string>
+    <string name="chat_background_mint">Mint</string>
+    <string name="chat_background_sand">Sand</string>
+    <string name="chat_background_rose">Rose</string>
+    <string name="chat_background_lavender">Lavender</string>
+    <string name="chat_background_slate">Slate</string>
+    <string name="chat_background_sunrise">Sunrise</string>
+    <string name="chat_background_ocean">Ocean</string>
+    <string name="chat_background_meadow">Meadow</string>
+    <string name="chat_background_dusk">Dusk</string>
 
     <!-- Bottom Navigation -->
     <string name="navigation_item_conversation">Conversations</string>

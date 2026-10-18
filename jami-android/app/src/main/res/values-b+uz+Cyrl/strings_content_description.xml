@@ -3,6 +3,7 @@
   <!--Strings for xml content description of images-->
   <string name="contact_quick_call_description">Тезкор қўнғироқ</string>
   <string name="contact_picture_description">Контакт расми</string>
+  <string name="presence_online">Онлайн</string>
   <string name="dial_numeric_pad">Рақамли клавиатура</string>
   <string name="contact_unblock">Блокдан чиқариш</string>
   <string name="video_extensions">Видео кенгайтмалари</string>

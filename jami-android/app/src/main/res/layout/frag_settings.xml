@@ -134,6 +134,43 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/settings_chat_background_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_large"
+                style="@style/CustomRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/chat_background_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="16dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/baseline_insert_photo_24" />
+
+                <TextView
+                    android:id="@+id/chat_background_title"
+                    style="@style/ListPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/chat_background_image"
+                    android:gravity="center_vertical"
+                    android:minHeight="24dp"
+                    android:text="@string/pref_chat_background_title" />
+
+                <cx.ring.views.ChatBackgroundPicker
+                    android:id="@+id/settings_chat_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chat_background_title"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/chat_background_image"
+                    app:flexWrap="wrap" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/settings_donate_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

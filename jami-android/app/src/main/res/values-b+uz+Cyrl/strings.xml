@@ -390,6 +390,19 @@
   <string name="menu_delete">Ўчириш</string>
   <string name="pref_darkTheme_title">Қоронғи мавзу</string>
   <string name="pref_darkTheme_summary">Тизим созламаси ўрнига доим қоронғи мавзуни ёқиш</string>
+  <string name="pref_chat_background_title">Суҳбат фони</string>
+  <string name="pref_chat_background_default">Стандарт</string>
+  <string name="pref_chat_background_custom">Ихтиёрий ранг</string>
+  <string name="chat_background_sky">Осмон</string>
+  <string name="chat_background_mint">Ялпиз</string>
+  <string name="chat_background_sand">Қум</string>
+  <string name="chat_background_rose">Атиргул</string>
+  <string name="chat_background_lavender">Лаванда</string>
+  <string name="chat_background_slate">Кулранг</string>
+  <string name="chat_background_sunrise">Тонг</string>
+  <string name="chat_background_ocean">Океан</string>
+  <string name="chat_background_meadow">Ўтлоқ</string>
+  <string name="chat_background_dusk">Шом</string>
   <!--Bottom Navigation-->
   <string name="navigation_item_conversation">Суҳбатлар</string>
   <string name="navigation_item_contact_request">Таклифлар</string>

@@ -390,6 +390,19 @@
   <string name="menu_delete">Oʻchirish</string>
   <string name="pref_darkTheme_title">Qorongʻi mavzu</string>
   <string name="pref_darkTheme_summary">Tizim sozlamasi oʻrniga doim qorongʻi mavzuni yoqish</string>
+  <string name="pref_chat_background_title">Suhbat foni</string>
+  <string name="pref_chat_background_default">Standart</string>
+  <string name="pref_chat_background_custom">Ixtiyoriy rang</string>
+  <string name="chat_background_sky">Osmon</string>
+  <string name="chat_background_mint">Yalpiz</string>
+  <string name="chat_background_sand">Qum</string>
+  <string name="chat_background_rose">Atirgul</string>
+  <string name="chat_background_lavender">Lavanda</string>
+  <string name="chat_background_slate">Kulrang</string>
+  <string name="chat_background_sunrise">Tong</string>
+  <string name="chat_background_ocean">Okean</string>
+  <string name="chat_background_meadow">Oʻtloq</string>
+  <string name="chat_background_dusk">Shom</string>
   <!--Bottom Navigation-->
   <string name="navigation_item_conversation">Suhbatlar</string>
   <string name="navigation_item_contact_request">Takliflar</string>
