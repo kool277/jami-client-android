@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_primary_light">#28B1ED</color>
-    <color name="color_primary_dark">#0f426b</color>
-    <color name="color_primary_light_container">#B2EBF2</color>
-    <color name="color_secondary">#00223C</color>
+    <!-- The accent: khaki, from its lightest tone to its darkest. -->
+    <color name="khaki_50">#F7F7E8</color>
+    <color name="khaki_100">#EDEDCF</color>
+    <color name="khaki_200">#DCDCA3</color>
+    <color name="khaki_300">#CACA73</color>
+    <color name="khaki_400">#BFBF40</color>
+    <color name="khaki_600">#808000</color>
+    <color name="khaki_700">#666600</color>
+    <color name="khaki_800">#4D4D00</color>
+    <color name="khaki_900">#333300</color>
 
-    <color name="color_primary_light_translucent">#B028B1ED</color>
-    <color name="color_primary_dark_translucent">#B00f426b</color>
+    <!-- The accent on dark backgrounds, under dark text. -->
+    <color name="color_primary_light">@color/khaki_300</color>
+    <!-- The accent on light backgrounds, and under white text. -->
+    <color name="color_primary_dark">@color/khaki_700</color>
+    <color name="color_primary_light_container">@color/khaki_100</color>
+    <color name="color_secondary">@color/khaki_900</color>
+
+    <color name="color_primary_light_translucent">#B0CACA73</color>
+    <color name="color_primary_dark_translucent">#B0666600</color>
 
     <color name="color_bottom_sheet_background">#E6272727</color>
 </resources>

@@ -9,10 +9,12 @@
 // The app builds against its daemon submodule; on a v* tag against the
 // jami-daemon commit that the workspace pins, the one the platform release
 // ships. Every build: the build image from the app's docker/Dockerfile,
-// unsigned release APKs for every ABI and flavor, and the libjamiclient
-// unit tests, in the ci/android container. On a v* tag: publish the APKs
-// to the GitHub release (see RELEASING.md in kool277/jami). Needs the
-// github-kool277 credential, docker and /var/cache/jami on the agent.
+// release APKs for every ABI and flavor (unsigned, as upstream builds
+// them) and the libjamiclient unit tests, in the ci/android container. On
+// a v* tag: sign the APKs with the release keystore and publish them to
+// the GitHub release (see RELEASING.md in kool277/jami). Needs the
+// github-kool277 and android-keystore* credentials, docker and
+// /var/cache/jami on the agent.
 
 // The kool277/jami ref to build with: for a v* release tag, the platform
 // release that made it, from the "Platform:" line of the tag message (see
@@ -113,7 +115,22 @@ pipeline {
         stage('Release') {
             when { tag 'v*' }
             steps {
-                sh 'VERSION="$TAG_NAME" DOCKER_RUN_ARGS="-e VERSION" SKIP_IMAGE_BUILD=1 "$CI/android/run.sh" sh /ci/package.sh'
+                // Signed with the release keystore held by the Jenkins
+                // credentials android-keystore (secret file) and
+                // android-keystore-password, android-key-alias and
+                // android-key-password (secret texts); see RELEASING.md in
+                // kool277/jami. The keystore is mounted read-only into the
+                // build container; the passwords go through the environment
+                // only (the shell expands them, not Groovy, so they never
+                // reach the build log).
+                withCredentials([file(credentialsId: 'android-keystore', variable: 'ANDROID_KEYSTORE_FILE'),
+                                 string(credentialsId: 'android-keystore-password', variable: 'ANDROID_KEYSTORE_PASSWORD'),
+                                 string(credentialsId: 'android-key-alias', variable: 'ANDROID_KEY_ALIAS'),
+                                 string(credentialsId: 'android-key-password', variable: 'ANDROID_KEY_PASSWORD')]) {
+                    sh '''VERSION="$TAG_NAME" ANDROID_KEYSTORE=/run/keystore.jks \\
+DOCKER_RUN_ARGS="-e VERSION -e ANDROID_KEYSTORE -e ANDROID_KEYSTORE_PASSWORD -e ANDROID_KEY_ALIAS -e ANDROID_KEY_PASSWORD -v $ANDROID_KEYSTORE_FILE:/run/keystore.jks:ro" \\
+SKIP_IMAGE_BUILD=1 "$CI/android/run.sh" sh /ci/package.sh'''
+                }
                 archiveArtifacts artifacts: 'jami-android/app/build/dist/*', fingerprint: true
                 withCredentials([usernamePassword(credentialsId: 'github-kool277',
                                                   usernameVariable: 'GH_USER',

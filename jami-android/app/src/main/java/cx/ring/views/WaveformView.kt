@@ -112,7 +112,7 @@ class WaveformView @JvmOverloads constructor(
     private val fadeTailPx = dp(FADE_TAIL_DP)
     private val activePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL
-        color = resolveThemeColor(androidx.appcompat.R.attr.colorPrimary, 0xFF1565C0.toInt())
+        color = resolveThemeColor(androidx.appcompat.R.attr.colorPrimary, ContextCompat.getColor(context, cx.ring.R.color.colorPrimary))
     }
     private val inactivePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL
