@@ -31,7 +31,7 @@
         app:tabBackground="@drawable/background_amber_dot_6dp"
         app:tabGravity="center"
         app:tabIndicator="@drawable/background_tab_indicator"
-        app:tabIndicatorColor="@color/color_primary_light"
+        app:tabIndicatorColor="@color/colorSecondary"
         app:tabIndicatorGravity="center">
 
         <!-- For Android-Studio preview only -->

@@ -91,7 +91,7 @@
     <!-- Main light base theme -->
     <style name="AppThemeBase.Light" parent="@style/Theme.Material3Expressive.Light.NoActionBar">
         <item name="colorPrimary">@color/color_primary_dark</item>
-        <item name="colorSecondary">@color/color_primary_light</item>
+        <item name="colorSecondary">@color/color_primary_dark</item>
         <item name="colorError">@color/colorError</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="android:textColor">@color/abc_primary_text_material_light</item>
