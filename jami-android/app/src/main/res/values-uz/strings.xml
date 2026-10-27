@@ -66,7 +66,7 @@
   <string name="notif_outgoing_call_title">Chiquvchi qoʻngʻiroq: %1$s</string>
   <string name="notif_outgoing_call">Chiquvchi qoʻngʻiroq</string>
   <string name="notif_current_call_title">Joriy qoʻngʻiroq: %1$s</string>
-  <string name="notif_current_call">Joriy qoʻngʻiroq</string>
+  <string name="notif_current_call">Davom etayotgan qoʻngʻiroq</string>
   <string name="notif_channel_call_in_progress">Qoʻngʻiroq davom etmoqda</string>
   <string name="notif_channel_calls">Qoʻngʻiroqlar</string>
   <string name="notif_channel_missed_calls">Javobsiz qoʻngʻiroqlar</string>
@@ -105,7 +105,7 @@
   <string name="action_call_minimize">Kichraytirish</string>
   <string name="action_call_mute">Ovozni oʻchirish</string>
   <string name="action_call_unmute">Ovozni yoqish</string>
-  <string name="ongoing_call">Joriy qoʻngʻiroq</string>
+  <string name="ongoing_call">Davom etayotgan qoʻngʻiroq</string>
   <string name="hist_in_call">Kiruvchi qoʻngʻiroq, %1$s</string>
   <string name="hist_out_call">Chiquvchi qoʻngʻiroq, %1$s</string>
   <string name="call_duration">Davomiyligi: %s</string>
@@ -149,7 +149,7 @@
   <string name="conversation_send_audio">Audio yozib olish</string>
   <string name="conversation_send_video">Video yozib olish</string>
   <string name="conversation_share_location">Joylashuvni ulashish</string>
-  <string name="ongoing_group_call">Joriy qoʻngʻiroq</string>
+  <string name="ongoing_group_call">Davom etayotgan qoʻngʻiroq</string>
   <string name="started_call">Qoʻngʻiroq boshlandi</string>
   <string name="in_reply_to">Quyidagiga javob</string>
   <!--MediaPreferenceFragment-->
@@ -189,7 +189,7 @@
   <string name="clear_history">Tozalash</string>
   <!--Conversation-->
   <string name="conversation_details">Suhbat tafsilotlari</string>
-  <string name="contact_details">Kontakt tafsilotlari</string>
+  <string name="contact_details">Kontakt maʼlumotlari</string>
   <string name="conversation_action_delete_this">Bu suhbatni oʻchirish</string>
   <string name="conversation_action_delete_this_title">Bu suhbat oʻchirilsinmi?</string>
   <string name="leave_conversation">Suhbatni tark etish</string>
@@ -293,7 +293,7 @@
   <string name="help_password_enter">Asosiy Jami hisobingiz parolini kiriting.</string>
   <string name="help_server_enter">Boshqaruv serveri manzilini kiriting.</string>
   <string name="pin_copied">Autentifikatsiya kodi buferga nusxalandi.</string>
-  <string name="copied_clipboard">Buferga nusxalandi.</string>
+  <string name="copied_clipboard">Almashuv buferiga nusxalandi.</string>
   <string name="wizard_next">Keyingi</string>
   <string name="wizard_back">Orqaga</string>
   <string name="wizard_skip">Oʻtkazib yuborish</string>
@@ -506,20 +506,20 @@
   <string name="jami_id_copy">Jami ID nusxalash</string>
   <string name="jami_id_share">Jami ID ulashish</string>
   <string name="jami_id_validate">Foydalanuvchi nomini roʻyxatdan oʻtkazish</string>
-  <string name="jami_id_available">Foydalanuvchi nomi boʻsh.</string>
+  <string name="jami_id_available">Bu foydalanuvchi nomi boʻsh.</string>
   <string name="jami_id_not_available">Foydalanuvchi nomi band.</string>
   <string name="jami_id_info">• Koʻpi bilan 32 ta belgi\n• Ruxsat etilgan maxsus belgilar: chiziqcha (-), pastki chiziq (_)</string>
   <string name="jami_id_looking_for_availability">Foydalanuvchi nomi boʻshligi tekshirilmoqda…</string>
   <string name="jami_id_choose_username">Foydalanuvchi nomini tanlang</string>
   <!--WelcomeJami-->
-  <string name="welcome_jami_title">Jami ilovasiga xush kelibsiz</string>
+  <string name="welcome_jami_title">Jami dasturiga xush kelibsiz</string>
   <string name="welcome_jami_description">Siz bilan osonroq bogʻlanishlari uchun Jami identifikatoringizni ulashing!</string>
   <!--Conversation details-->
   <string name="details">Tafsilotlar</string>
   <string name="secure_p2p_connection">Xavfsiz toʻgʻridan-toʻgʻri ulanish</string>
   <string name="swarm_type">Suhbat turi</string>
   <string name="Private">Shaxsiy</string>
-  <string name="swarm_id">Swarm identifikatori</string>
+  <string name="swarm_id">Swarm ID</string>
   <string name="show_qr_code">QR-kodni koʻrsatish</string>
   <string name="show_certificate">Sertifikatni koʻrsatish</string>
   <string name="mute_conversation">Suhbat ovozini oʻchirish</string>
@@ -616,7 +616,7 @@
   <string name="shared_services_port">Port: %d</string>
   <string name="shared_services_no_description">Tavsif yoʻq</string>
   <string name="shared_services_empty_subtitle">Mahalliy fayllar yoki xizmatlarni Jami foydalanuvchilari bilan ulashing</string>
-  <string name="shared_services_more_options">Boshqa parametrlar</string>
+  <string name="shared_services_more_options">Boshqa amallar</string>
   <string name="shared_services_open_in_browser">Brauzerda ochish</string>
   <string name="shared_services_disconnect_all">Hammasini uzish</string>
   <string name="shared_services_disconnect_all_title">Hammasi uzilsinmi?</string>

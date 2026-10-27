@@ -148,7 +148,7 @@
   <!--restore/backup-->
   <string name="account_new_device_password">Hisobni qulfdan chiqarish uchun asosiy parolni kiriting</string>
   <string name="error_password_char_count">Kamida 6 ta belgi</string>
-  <string name="error_passwords_not_equals">Parollar mos kelmadi.</string>
+  <string name="error_passwords_not_equals">Parollar mos kelmaydi.</string>
   <string name="export_account_wait_title">Iltimos, kuting…</string>
   <string name="export_account_wait_message">Hisob maʼlumotlari eksport qilinmoqda</string>
   <string name="account_export_file">Hisobning zaxira nusxasini yaratish</string>
@@ -212,7 +212,7 @@
   <!--Name registration-->
   <string name="error_username_empty">Foydalanuvchi nomini kiriting</string>
   <string name="no_registered_name_for_account">Roʻyxatdan oʻtgan foydalanuvchi nomi yoʻq</string>
-  <string name="username_available">Foydalanuvchi nomi boʻsh.</string>
+  <string name="username_available">Bu foydalanuvchi nomi boʻsh.</string>
   <string name="register_name">Nomni roʻyxatdan oʻtkazish</string>
   <string name="trying_to_register_name">Foydalanuvchi nomi roʻyxatdan oʻtkazilmoqda. Iltimos, kuting…</string>
   <string name="registered_username">Roʻyxatdan oʻtgan foydalanuvchi nomi</string>
@@ -229,7 +229,7 @@
   <string name="account_status_offline">Oflayn</string>
   <string name="account_status_error">Xato</string>
   <!--Create account-->
-  <string name="account_creation_home">Jami ilovasiga xush kelibsiz</string>
+  <string name="account_creation_home">Jami dasturiga xush kelibsiz</string>
   <string name="account_creation_profile">Profilingizni yarating</string>
   <string name="account_creation_ring">Jami hisobingizni yarating</string>
   <string name="account_sip_cannot_be_registered">SIP hisobini roʻyxatdan oʻtkazishda xatolik yuz berdi.</string>
