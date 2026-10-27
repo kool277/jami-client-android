@@ -45,4 +45,5 @@
     <locale android:name="ast-ES" />
     <locale android:name="uz" />
     <locale android:name="uz-Cyrl" />
+    <locale android:name="uz-Latn-2026" />
 </locale-config>
