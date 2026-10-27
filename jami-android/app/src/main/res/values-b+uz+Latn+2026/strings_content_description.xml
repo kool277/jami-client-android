@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Strings for xml content description of images-->
+  <string name="contact_quick_call_description">Tezkor qönğiroq</string>
+  <string name="contact_picture_description">Kontakt rasmi</string>
+  <string name="presence_online">Onlayn</string>
+  <string name="dial_numeric_pad">Raqamli klaviatura</string>
+  <string name="contact_unblock">Blokdan çiqariş</string>
+  <string name="video_extensions">Video kengaytmalari</string>
+  <string name="file_download_button">Yuklab oliş</string>
+  <string name="control_play">Ijro etiş</string>
+  <string name="control_replay">Qayta ijro etiş</string>
+  <string name="control_pause">Pauza</string>
+  <string name="searchbar_navigation_account">Hisobni tanlaş</string>
+  <string name="add_conversation_member">Suhbatga aʼzo qöşiş</string>
+  <string name="qrcode_to_scan">Skanerlaş uçun QR-kod</string>
+  <string name="collab_format_bold">Qalin</string>
+  <string name="collab_format_italic">Kursiv</string>
+  <string name="collab_format_underline">Tagiga çizilgan</string>
+  <string name="collab_format_strike">Ustidan çizilgan</string>
+  <string name="collab_format_h1">Sarlavha 1</string>
+  <string name="collab_format_h2">Sarlavha 2</string>
+  <string name="collab_format_h3">Sarlavha 3</string>
+  <string name="collab_format_bullet_list">Belgili röyxat</string>
+  <string name="collab_format_ordered_list">Raqamli röyxat</string>
+  <string name="collab_format_align_left">Çapga tekislaş</string>
+  <string name="collab_format_align_center">Markazga tekislaş</string>
+  <string name="collab_format_align_right">Öngga tekislaş</string>
+  <string name="collab_format_align_justify">Kenglik böyiça tekislaş</string>
+  <string name="collab_format_link">Havola qöyiş</string>
+  <string name="collab_format_image">Rasm qöyiş</string>
+  <string name="collab_format_clear">Formatlaşni tozalaş</string>
+  <string name="collab_format_paragraph_style">Xatboşi uslubi</string>
+  <string name="collab_format_font">Şrift</string>
+  <string name="collab_format_size">Şrift ölçami</string>
+  <string name="collab_format_alignment">Xatboşini tekislaş</string>
+  <string name="collab_format_choice">%1$s: %2$s</string>
+  <string name="collab_undo">Bekor qiliş</string>
+  <string name="collab_redo">Qaytariş</string>
+</resources>

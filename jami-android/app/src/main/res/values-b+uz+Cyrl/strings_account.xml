@@ -148,7 +148,7 @@
   <!--restore/backup-->
   <string name="account_new_device_password">Ҳисобни қулфдан чиқариш учун асосий паролни киритинг</string>
   <string name="error_password_char_count">Камида 6 та белги</string>
-  <string name="error_passwords_not_equals">Пароллар мос келмади.</string>
+  <string name="error_passwords_not_equals">Пароллар мос келмайди.</string>
   <string name="export_account_wait_title">Илтимос, кутинг…</string>
   <string name="export_account_wait_message">Ҳисоб маълумотлари экспорт қилинмоқда</string>
   <string name="account_export_file">Ҳисобнинг захира нусхасини яратиш</string>
@@ -212,7 +212,7 @@
   <!--Name registration-->
   <string name="error_username_empty">Фойдаланувчи номини киритинг</string>
   <string name="no_registered_name_for_account">Рўйхатдан ўтган фойдаланувчи номи йўқ</string>
-  <string name="username_available">Фойдаланувчи номи бўш.</string>
+  <string name="username_available">Бу фойдаланувчи номи бўш.</string>
   <string name="register_name">Номни рўйхатдан ўтказиш</string>
   <string name="trying_to_register_name">Фойдаланувчи номи рўйхатдан ўтказилмоқда. Илтимос, кутинг…</string>
   <string name="registered_username">Рўйхатдан ўтган фойдаланувчи номи</string>
@@ -229,7 +229,7 @@
   <string name="account_status_offline">Офлайн</string>
   <string name="account_status_error">Хато</string>
   <!--Create account-->
-  <string name="account_creation_home">Jami иловасига хуш келибсиз</string>
+  <string name="account_creation_home">Jami дастурига хуш келибсиз</string>
   <string name="account_creation_profile">Профилингизни яратинг</string>
   <string name="account_creation_ring">Jami ҳисобингизни яратинг</string>
   <string name="account_sip_cannot_be_registered">SIP ҳисобини рўйхатдан ўтказишда хатолик юз берди.</string>
@@ -259,7 +259,7 @@
   <string name="account_link_time_valid">Аутентификация кодининг амал қилиш муддати тугайди: %1$s.</string>
   <string name="account_link_device_info">QR-код ёки аутентификация кодини кўрсатиш учун бошқа Jami иловасида «Янги қурилмани боғлаш» бандини танланг.</string>
   <string name="account_generate_export_device">Бошқа қурилмада</string>
-  <string name="account_generate_export_info">Jami иловасини ўрнатинг ва ишга туширинг. «Бошқа қурилмадан импорт қилиш» бандини танланг ва QR-кодни сканерланг. Ёки ПИН-кодни қўлда киритинг.</string>
+  <string name="account_generate_export_info">Jami иловасини ўрнатинг ва ишга туширинг. «Бошқа қурилмадан импорт қилиш» бандини танланг ва QR-кодни сканерланг. Ёки PIN-кодни қўлда киритинг.</string>
   <string name="content_description_qr_generated">Ҳисоб QR-коди</string>
   <string name="account_generate_export_invalid">Аутентификация коди энди яроқсиз.\nЯнги қурилмани боғлаш учун паролни киритинг ва янги код яратинг.</string>
   <string name="account_generate_export_invalid_two">Аутентификация коди энди яроқсиз.\nЯнги қурилмани боғлаш учун янги код яратинг.</string>

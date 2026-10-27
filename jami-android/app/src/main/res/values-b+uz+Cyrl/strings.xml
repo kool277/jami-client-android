@@ -66,7 +66,7 @@
   <string name="notif_outgoing_call_title">Чиқувчи қўнғироқ: %1$s</string>
   <string name="notif_outgoing_call">Чиқувчи қўнғироқ</string>
   <string name="notif_current_call_title">Жорий қўнғироқ: %1$s</string>
-  <string name="notif_current_call">Жорий қўнғироқ</string>
+  <string name="notif_current_call">Давом этаётган қўнғироқ</string>
   <string name="notif_channel_call_in_progress">Қўнғироқ давом этмоқда</string>
   <string name="notif_channel_calls">Қўнғироқлар</string>
   <string name="notif_channel_missed_calls">Жавобсиз қўнғироқлар</string>
@@ -105,7 +105,7 @@
   <string name="action_call_minimize">Кичрайтириш</string>
   <string name="action_call_mute">Овозни ўчириш</string>
   <string name="action_call_unmute">Овозни ёқиш</string>
-  <string name="ongoing_call">Жорий қўнғироқ</string>
+  <string name="ongoing_call">Давом этаётган қўнғироқ</string>
   <string name="hist_in_call">Кирувчи қўнғироқ, %1$s</string>
   <string name="hist_out_call">Чиқувчи қўнғироқ, %1$s</string>
   <string name="call_duration">Давомийлиги: %s</string>
@@ -149,7 +149,7 @@
   <string name="conversation_send_audio">Аудио ёзиб олиш</string>
   <string name="conversation_send_video">Видео ёзиб олиш</string>
   <string name="conversation_share_location">Жойлашувни улашиш</string>
-  <string name="ongoing_group_call">Жорий қўнғироқ</string>
+  <string name="ongoing_group_call">Давом этаётган қўнғироқ</string>
   <string name="started_call">Қўнғироқ бошланди</string>
   <string name="in_reply_to">Қуйидагига жавоб</string>
   <!--MediaPreferenceFragment-->
@@ -189,7 +189,7 @@
   <string name="clear_history">Тозалаш</string>
   <!--Conversation-->
   <string name="conversation_details">Суҳбат тафсилотлари</string>
-  <string name="contact_details">Контакт тафсилотлари</string>
+  <string name="contact_details">Контакт маълумотлари</string>
   <string name="conversation_action_delete_this">Бу суҳбатни ўчириш</string>
   <string name="conversation_action_delete_this_title">Бу суҳбат ўчирилсинми?</string>
   <string name="leave_conversation">Суҳбатни тарк этиш</string>
@@ -234,7 +234,7 @@
   <string name="conversation_reply_you">Сиз</string>
   <string name="video_not_found">Видео файл топилмади</string>
   <string name="conversation_preference_color">Суҳбат ранги</string>
-  <string name="conversation_preference_emoji">Суҳбат эможиси</string>
+  <string name="conversation_preference_emoji">Суҳбат эмодзиси</string>
   <string name="conversation_type_contact">Jami контакти</string>
   <string name="conversation_type_private">Шахсий</string>
   <string name="conversation_type_group">Гуруҳ</string>
@@ -293,7 +293,7 @@
   <string name="help_password_enter">Асосий Jami ҳисобингиз паролини киритинг.</string>
   <string name="help_server_enter">Бошқарув сервери манзилини киритинг.</string>
   <string name="pin_copied">Аутентификация коди буферга нусхаланди.</string>
-  <string name="copied_clipboard">Буферга нусхаланди.</string>
+  <string name="copied_clipboard">Алмашув буферига нусхаланди.</string>
   <string name="wizard_next">Кейинги</string>
   <string name="wizard_back">Орқага</string>
   <string name="wizard_skip">Ўтказиб юбориш</string>
@@ -506,20 +506,20 @@
   <string name="jami_id_copy">Jami ID нусхалаш</string>
   <string name="jami_id_share">Jami ID улашиш</string>
   <string name="jami_id_validate">Фойдаланувчи номини рўйхатдан ўтказиш</string>
-  <string name="jami_id_available">Фойдаланувчи номи бўш.</string>
+  <string name="jami_id_available">Бу фойдаланувчи номи бўш.</string>
   <string name="jami_id_not_available">Фойдаланувчи номи банд.</string>
   <string name="jami_id_info">• Кўпи билан 32 та белги\n• Рухсат этилган махсус белгилар: чизиқча (-), пастки чизиқ (_)</string>
   <string name="jami_id_looking_for_availability">Фойдаланувчи номи бўшлиги текширилмоқда…</string>
   <string name="jami_id_choose_username">Фойдаланувчи номини танланг</string>
   <!--WelcomeJami-->
-  <string name="welcome_jami_title">Jami иловасига хуш келибсиз</string>
+  <string name="welcome_jami_title">Jami дастурига хуш келибсиз</string>
   <string name="welcome_jami_description">Сиз билан осонроқ боғланишлари учун Jami идентификаторингизни улашинг!</string>
   <!--Conversation details-->
   <string name="details">Тафсилотлар</string>
   <string name="secure_p2p_connection">Хавфсиз тўғридан-тўғри уланиш</string>
   <string name="swarm_type">Суҳбат тури</string>
   <string name="Private">Шахсий</string>
-  <string name="swarm_id">Swarm идентификатори</string>
+  <string name="swarm_id">Swarm ID</string>
   <string name="show_qr_code">QR-кодни кўрсатиш</string>
   <string name="show_certificate">Сертификатни кўрсатиш</string>
   <string name="mute_conversation">Суҳбат овозини ўчириш</string>
@@ -616,7 +616,7 @@
   <string name="shared_services_port">Порт: %d</string>
   <string name="shared_services_no_description">Тавсиф йўқ</string>
   <string name="shared_services_empty_subtitle">Маҳаллий файллар ёки хизматларни Jami фойдаланувчилари билан улашинг</string>
-  <string name="shared_services_more_options">Бошқа параметрлар</string>
+  <string name="shared_services_more_options">Бошқа амаллар</string>
   <string name="shared_services_open_in_browser">Браузерда очиш</string>
   <string name="shared_services_disconnect_all">Ҳаммасини узиш</string>
   <string name="shared_services_disconnect_all_title">Ҳаммаси узилсинми?</string>
